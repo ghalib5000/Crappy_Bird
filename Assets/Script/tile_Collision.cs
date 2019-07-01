@@ -18,13 +18,14 @@ public class tile_Collision : MonoBehaviour
         //TODO
         Debug.Log("you lose");
         singularity();
-        over.SetActive(true);
+     
     }
     private void singularity()
     {
         player.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         cam.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         planim.enabled = false;
+        over.SetActive(true);
     }
 }
 
