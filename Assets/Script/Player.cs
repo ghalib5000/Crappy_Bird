@@ -4,28 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    public Rigidbody2D cam;
     public Vector2 offsets;
-    public float y = 0,x=8;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float y = 0;
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-
-        rb.AddForce(offsets * Time.fixedDeltaTime);
-
-        if (Input.GetKey("space"))
+    {   
+        cam.AddForce(offsets * Time.fixedDeltaTime);
+        if (Input.GetButton("Jump"))
         {
-            offsets.x = x;
             offsets.y = y;
-            rb.AddForce(offsets * Time.fixedDeltaTime);
+            cam.AddForce(offsets * Time.fixedDeltaTime);
             offsets.y = 0;
-            
+
         }
     }
+
 }
