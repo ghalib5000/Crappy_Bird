@@ -8,6 +8,15 @@ public class tile_Collision : MonoBehaviour
     public Rigidbody2D player, cam;
     public Animator planim;
     public GameObject over;
+    public tile_Collision()
+    {
+
+    }
+    public tile_Collision(Rigidbody2D player, Rigidbody2D cam)
+        {
+        this.player = player;
+        this.cam = cam;
+        }
     private void OnCollisionEnter2D(Collision2D collision)
     {
       Debug.Log("collision!");
