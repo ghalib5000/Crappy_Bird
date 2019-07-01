@@ -25,6 +25,8 @@ public class move : MonoBehaviour
         {
             offsets.x = horizontal * 100;
             rb.AddForce(offsets * Time.fixedDeltaTime);
+            offsets.x = x;
+            
         }
     }
     void Update()

@@ -16,5 +16,6 @@ public class restart : MonoBehaviour
     {
         Debug.Log("started again");
         SceneManager.LoadScene(0);
+
     }
 }
