@@ -20,11 +20,11 @@ public class tile_Collision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
       Debug.Log("collision!");
-        singularity();
+       // singularity();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //TODO
+        
         Debug.Log("you lose");
         singularity();
      
